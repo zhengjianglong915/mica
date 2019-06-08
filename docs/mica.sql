@@ -1,5 +1,5 @@
 # --- create database for mica server
-create database mica;
+CREATE DATABASE mica;
 -- user info table
 CREATE TABLE `user` (
   `id` INT(20) NOT NULL AUTO_INCREMENT,
