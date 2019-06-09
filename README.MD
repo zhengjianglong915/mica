@@ -8,3 +8,4 @@ mica 是云母，具有非常高的绝缘、绝热性能，化学稳定性好，
 - Monitor the tasks performed by the client.
 - Handler of client need provide default implement.
 - Monitor result of task 
+- SEDA
