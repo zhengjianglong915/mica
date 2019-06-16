@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.along.mica.dal.dao.JobDAO">
+    <resultMap id="jobDO" type="com.along.mica.dal.dataobject.JobDO">
+        <id property="id" javaType="java.lang.Long" column="id"/>
+        <id property="name" javaType="java.lang.String" column="name"/>
+        <id property="cron" javaType="java.lang.String" column="cron"/>
+        <id property="des" javaType="java.lang.String" column="des"/>
+        <id property="app" javaType="java.lang.String" column="app"/>
+    </resultMap>
+
+    <insert id="insert">
+        insert into job (name, cron, app, des) values (#{name}, #{cron}, #{app}, #{des})
+    </insert>
+
+    <!-- 单表查询info数据 -->
+    <select id="queryById" resultMap="jobDO">
+        select * from job where id = #{id}
+    </select>
+</mapper>
